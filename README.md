@@ -3,8 +3,10 @@ Simple docker image that monitors live stream channels and downloads them to an 
 
 ## Build and run
 Build and run using docker:  
-`docker build -t streamdownloader .`  
-`docker run --restart=always -d -v /path/to/config:/app/config -v /path/to/output:/app/output streamdownloader`
+```bash
+docker build -t streamdownloader .
+docker run --restart=always -d -v /path/to/config:/app/config -v /path/to/output:/app/output streamdownloader
+```
 
 Or use docker-compose instead:
 ```yaml
@@ -20,7 +22,7 @@ services:
 ```
 
 ## Configure
-To monitor a channel, add the channel urls to config/streams.txt, separated by newlines, e.g.
+To monitor a channel, add the channel urls to `config/streams.txt`, separated by newlines, e.g.
 ```
 https://www.twitch.tv/<channel1>
 https://www.twitch.tv/<channel2>
