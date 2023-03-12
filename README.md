@@ -14,7 +14,7 @@ version: '3'
 
 services:
   streamdownloader:
-    image: streamdownloader
+    build: /path/to/Stream-Downloader
     restart: always
     volumes:
       - /path/to/config:/app/config
